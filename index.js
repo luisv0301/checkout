@@ -1,11 +1,14 @@
 const hoursUI = document.getElementById("hours");
 const minutesUI = document.getElementById("minutes");
 const secondsUI = document.getElementById("seconds");
+
+
+
 let today = new Date();
 let tomorrow;
 let tomorrowLocaleStorage = localStorage.getItem("fecha");
 
-console.log("valor de localStorage:", tomorrowLocaleStorage);
+
 
 if (tomorrowLocaleStorage) {
   tomorrow = new Date(tomorrowLocaleStorage);
@@ -29,16 +32,6 @@ const updateCounter = () => {
 };
 
 
-function iframeLoaded() {
-  const iFrameID = document.getElementById('Iframe');
-  if(iFrameID) {
-        // here you can make the height, I delete it first, then I make it again
-        iFrameID.height = "";
-        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-
-        console.log("iframe altura es:", iFrameID.height)
-  }
-}
 
 
 setInterval(updateCounter, 1000);
