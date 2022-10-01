@@ -68,28 +68,12 @@
           src="https://web.testing.plexo.com.uy/ca5044dc20d347e7a47be98f36a0d139"
           frameborder="0"
           class="iframe"
-          id="Iframe"
-          onload="iframeLoaded()"
-
         ></iframe>
 
       <p class="footer text--center">
         Invertir en ti es la única inversión con retorno garantizado
       </p>
     </div>
-    <script type="text/javascript">
-      function iframeLoaded() {
-          const iFrameID = document.getElementById('Iframe');
-          const valorY = iFrameID.contentWindow.document.body.scrollHeight;
-          console.log("el valor y es:", valorY)
-
-          if(iFrameID) {
-                // here you can make the height, I delete it first, then I make it again
-                iFrameID.height = "";
-                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight;
-          }
-      }
-    </script>
     <script src="index.js"></script>
   </body>
 </html>
