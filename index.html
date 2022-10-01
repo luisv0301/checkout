@@ -63,14 +63,16 @@
           </div>
         </div>
       </div>
-      <div class="iframe__container">
+
         <iframe
           src="https://web.testing.plexo.com.uy/ca5044dc20d347e7a47be98f36a0d139"
           frameborder="0"
           class="iframe"
-          onload="this.height=this.contentWindow.document.body.scrollHeight;"
+          id="Iframe"
+          onload="iframeLoaded()"
+
         ></iframe>
-      </div>
+
       <p class="footer text--center">
         Invertir en ti es la única inversión con retorno garantizado
       </p>

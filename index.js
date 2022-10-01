@@ -28,4 +28,17 @@ const updateCounter = () => {
   secondsUI.innerHTML = seconds < 10 ? "0" + seconds : seconds;
 };
 
+
+function iframeLoaded() {
+  const iFrameID = document.getElementById('Iframe');
+  if(iFrameID) {
+        // here you can make the height, I delete it first, then I make it again
+        iFrameID.height = "";
+        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+
+        console.log("iframe altura es:", iFrameID.height)
+  }
+}
+
+
 setInterval(updateCounter, 1000);
