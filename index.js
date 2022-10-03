@@ -6,7 +6,7 @@ const secondsUI = document.getElementById("seconds");
 
 let today = new Date();
 let tomorrow;
-let tomorrowLocaleStorage = localStorage.getItem("fecha");
+let tomorrowLocaleStorage = localStorage.getItem("fechaGuia");
 
 
 
@@ -15,7 +15,7 @@ if (tomorrowLocaleStorage) {
 } else {
   tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
-  localStorage.setItem("fecha", tomorrow);
+  localStorage.setItem("fechaGuia", tomorrow);
 }
 
 const updateCounter = () => {
