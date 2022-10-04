@@ -20,7 +20,7 @@ img {
   justify-content: center;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.1rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -37,6 +37,7 @@ img {
   max-width: 600px;
 }
 .plan__header {
+  font-weight: 800;
   text-align: center;
   position: relative;
   color: #ffffff;
@@ -52,6 +53,7 @@ img {
   background-image: url("images/vianda.png");
   background-size: contain;
   background-position: center center;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0.45rem;
   right: 0;
@@ -128,7 +130,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
 }
 .counter__text > img {
   width: 1.5rem;
@@ -156,9 +157,18 @@ img {
   height: 100%;
 }
 
+.padding-right{
+  padding-right: 0;
+}
+
 @media (max-width: 480px) {
   .iframe__container {
     height: 705px;
+  }
+}
+@media (max-width: 416px) {
+  .plan__row{
+    font-size: 0.8rem;
   }
 }
 
@@ -168,12 +178,19 @@ img {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 362px) {
   .plan__header {
     font-size: 1rem;
   }
   .counter__number {
     font-size: 1.5rem;
+  }
+  .plan__row{
+    font-size: 0.7rem;
+  }
+  .plan__header::after{
+    width: 3rem;
+    height: 3rem;
   }
 }
 
